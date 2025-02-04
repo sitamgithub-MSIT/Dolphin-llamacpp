@@ -28,8 +28,8 @@ hf_hub_download(
     local_dir="./models",
 )
 hf_hub_download(
-    repo_id="bartowski/Dolphin3.0-Llama3.2-3B-GGUF",
-    filename="Dolphin3.0-Llama3.2-3B-Q4_K_M.gguf",
+    repo_id="bartowski/Dolphin3.0-Qwen2.5-0.5B-GGUF",
+    filename="Dolphin3.0-Qwen2.5-0.5B-Q6_K.gguf",
     local_dir="./models",
 )
 
@@ -143,9 +143,9 @@ demo = gr.ChatInterface(
         gr.Dropdown(
             choices=[
                 "Dolphin3.0-Llama3.2-1B-Q6_K.gguf",
-                "Dolphin3.0-Llama3.2-3B-Q4_K_M.gguf",
+                "Dolphin3.0-Qwen2.5-0.5B-Q6_K.gguf",
             ],
-            value="Dolphin3.0-Llama3.2-1B-Q6_K.gguf",
+            value="Dolphin3.0-Qwen2.5-0.5B-Q6_K.gguf",
             label="Model",
             info="Select the AI model to use for chat",
         ),
