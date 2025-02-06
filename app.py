@@ -136,6 +136,7 @@ def respond(
 # Create a chat interface
 demo = gr.ChatInterface(
     respond,
+    examples=[["What is the capital of France?"], ["Why is the color of the sky blue?"], ["What is gravity?"]],
     additional_inputs_accordion=gr.Accordion(
         label="⚙️ Parameters", open=False, render=False
     ),
