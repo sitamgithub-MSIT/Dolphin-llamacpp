@@ -1,6 +1,6 @@
 # Dolphin🐬 Llama.cpp
 
-Dolphin 3.0 is a powerful, general-purpose local AI model designed for coding, math, and various other tasks, aiming similar to the models like ChatGPT and Claude.
+Dolphin 3.0 is a powerful, general-purpose local AI model designed for coding, math, and various other tasks, aiming similar to models like ChatGPT and Claude.
 
 ## Project Structure
 
