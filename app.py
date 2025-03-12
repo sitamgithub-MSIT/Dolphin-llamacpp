@@ -34,7 +34,7 @@ hf_hub_download(
 )
 
 # Set the title and description
-title = "Dolphin🐬 Llamacpp"
+title = "Dolphin🐬 Llama.cpp"
 description = """Dolphin 3.0 is a powerful, general-purpose local AI model designed for coding, math, and various other tasks, aiming similar to the models like ChatGPT and Claude."""
 
 
@@ -77,8 +77,10 @@ def respond(
                 model_path=f"models/{model}",
                 flash_attn=False,
                 n_gpu_layers=0,
-                n_batch=32,
-                n_ctx=8192,
+                n_batch=8,
+                n_ctx=2048,
+                n_threads=2,
+                n_threads_batch=2,
             )
             llm_model = model
         provider = LlamaCppPythonProvider(llm)
@@ -136,7 +138,7 @@ def respond(
 # Create a chat interface
 demo = gr.ChatInterface(
     respond,
-    examples=[["What is the capital of France?"], ["Why is the color of the sky blue?"], ["What is gravity?"]],
+    examples=[["What is the capital of France?"], ["Tell me something about artificial intelligence."], ["What is gravity?"]],
     additional_inputs_accordion=gr.Accordion(
         label="⚙️ Parameters", open=False, render=False
     ),
@@ -158,9 +160,9 @@ demo = gr.ChatInterface(
         ),
         gr.Slider(
             minimum=512,
-            maximum=4096,
-            value=2048,
-            step=512,
+            maximum=2048,
+            value=1024,
+            step=1,
             label="Max Tokens",
             info="Maximum length of response (higher = longer replies)",
         ),

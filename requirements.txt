@@ -1,5 +1,5 @@
-huggingface_hub==0.22.2
+huggingface_hub
 scikit-build-core
 llama-cpp-python
-llama-cpp-agent>=0.2.10
+llama-cpp-agent
 gradio
